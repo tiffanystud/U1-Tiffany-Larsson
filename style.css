@@ -1,0 +1,215 @@
+:root {
+    --marginSmall: 2vw;
+    --marginBig: 5vw;
+    --marginLarge: 10vw;
+
+    --colorLight: #d1bbff;
+    --colorLighter: #e1d5f9;
+    --colorLigtest: #eae4fa;
+
+    --colorDark: #916dd5;
+    --colorDarker: #543687;
+    --colorDarkest: #351658;
+}
+
+@font-face {
+    font-family: "Stick No Bills";
+    src: url("googleFont/StickNoBills-VariableFont_wght.ttf")
+}
+
+body {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.7fr 2fr 1fr 1fr 0.3fr;
+
+    background-color: var(--colorLigtest);
+    color: var(--colorDarker);
+
+    line-height: 1.4;
+}
+
+header {
+    grid-column: 1 /span 3;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--colorLight);
+    color: var(--colorDarkest);
+}
+
+header h1 {
+    margin-left: 5vw;
+}
+
+footer {
+    grid-column: 1 /span 3;
+    grid-row: 5;
+
+    text-align: center;
+
+    background-color: var(--colorLight);
+    color: var(--colorDarkest);
+}
+
+main {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: var(--colorLighter);
+    text-align: justify;
+}
+
+#navList {
+    margin-right: var(--marginBig);
+
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    gap: 10px;
+}
+
+#navList a {
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: none;
+
+    padding: 20px;
+    border: 3px var(--colorDarker) solid;
+    border-radius: 50px;
+}
+
+
+/* -- Layout och stilsättning enskilda sidor --*/
+/* Sida 1 */
+#indexBox1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 3;
+
+    overflow: scroll;
+
+    margin: var(--marginBig);
+}
+
+#indexBox2 {
+    grid-column: 3;
+    grid-row: 1 /span 3;
+
+    background-image: url("images/portraitPhoto.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----- */
+
+
+/* Sida 2 */
+#pageTwoBox1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    height: 35vh;
+}
+
+#pageTwoBox2 {
+    grid-column: 1 / span 3;
+    grid-row: 2/ span 2;
+
+    margin: var(--marginBig) var(--marginLarge);
+    overflow: scroll;
+}
+
+#pageTwoBox2 h1 {
+    margin: 0;
+}
+
+#pageTwoBox1 img {
+    object-fit: cover;
+    object-position: 20% 70%;
+
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- */
+
+
+/* Sida 3 */
+#pageThreeBox1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    background-image: url("images/workPhoto.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#pageThreeBox2 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+#pageThreeBox3 {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+#pageThreeBox4 {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+}
+
+.textBlock {
+    overflow: scroll;
+    margin: var(--marginSmall);
+}
+
+.textBlock h2 {
+    text-align: center;
+    font-family: Stick No Bills, Arial, Helvetica, sans-serif;
+}
+
+/* ----- */
+
+
+/* --- Användarinteraktion  --- */
+#navList a:hover {
+    background-color: var(--colorLigtest);
+}
+
+#pageThreeBox2:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    padding: 30px;
+    background-color: #ffffff43;
+}
+
+#pageThreeBox3:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    padding: 30px;
+    background-color: #ffffff43;
+}
+
+#pageThreeBox4:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    padding: 30px;
+    background-color: #ffffff43;
+}
+
+#thisPage {
+    background-color: var(--colorLighter);
+}
+
+/* ----- */
